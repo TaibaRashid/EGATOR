@@ -1,0 +1,39 @@
+/* Home.css */
+.navbar {
+    grid-area: nav2;
+  }
+  
+  .aside2 {
+    grid-area: aside2;
+  }
+  
+  .middle {
+    grid-area: main;
+  }
+  
+  .right{
+    grid-area: right;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 16rem 55rem auto; 
+    grid-template-rows: auto; 
+    grid-template-areas:
+      'nav2 nav2 nav2 nav2 nav2 nav2 nav2 nav2'
+       'aside2 main main main main main main right'; 
+    gap: 1rem; 
+  }
+  @media screen and (max-width: 1024px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr; 
+      grid-template-rows: auto; 
+      grid-template-areas:
+        'nav2'
+        'main'
+        'right'; 
+      gap: 0.5rem; 
+      margin-left: 1rem;
+    }
+  }
+  
